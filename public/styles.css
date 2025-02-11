@@ -1,0 +1,88 @@
+*{
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body, .snake{
+    background-color: rgb(74, 74, 102);
+}
+
+#instruction-text{
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    padding: 30px;
+    margin: 0;
+    color: black;
+}
+
+#game-board{
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    margin: 5px;
+}
+
+.game-border1{
+    border: 10px solid rgb(45, 65, 16);
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px greenyellow;
+}
+
+.game-border2{
+    border: 10px solid rgb(155, 254, 7);
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px greenyellow;
+}
+
+.game-border3{
+    border: 10px solid greenyellow;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px greenyellow;
+}
+
+#scores{
+    display: flex;
+    justify-content: space-between;
+}
+
+#score{
+    color: greenyellow;
+}
+
+#highscore{
+    color: white;
+    display: none;
+}
+
+#score, #highscore{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#logo, .game-border3{
+    background-color: white;
+}
+
+.snake{
+    border: 1px dotted gray;
+}
+
+.food{
+    background-color: whitesmoke;
+    border: 5px solid #999;
+}
+
+#logo{
+    position: absolute;
+}
