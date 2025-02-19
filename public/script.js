@@ -75,6 +75,7 @@ function move() {
     snake.unshift(head)
 
     if (head.x === food.x && head.y === food.y) {
+        playSound();
         food = generateFood();
         increaseSpeed();
         clearInterval(gameInterval);
@@ -89,6 +90,10 @@ function move() {
     }
 }
 
+function playSound(){
+    var audio = new Audio('pluh.mp3');
+    audio.play();
+}
 
 function startGame() {
     gameStarted = true;
@@ -139,7 +144,6 @@ function increaseSpeed(){
 
 function checkCollision() {
     const head = snake[0];
-
     if (head.x < 1 || head.x > gridSize || head.y < 1 || head.y > gridSize) {
         resetGame();
     }
